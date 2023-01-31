@@ -1,0 +1,19 @@
+{
+  "name": "pnpm-mono",
+  "version": "1.0.0",
+  "description": "monorepo application architecture base on pnpm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["pnpm", "monorepo"],
+  "author": "auu",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.0.0"
+  }
+}
