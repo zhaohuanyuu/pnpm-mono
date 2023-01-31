@@ -1,4 +1,10 @@
 # .gitignore
+
+# editor
+.idea
+.vscode
+
+# project
 node_modules
 dist
 build
