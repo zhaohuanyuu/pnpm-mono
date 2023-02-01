@@ -4,7 +4,7 @@ monorepo application architecture base on pnpm
 
 ## schedule
 
-~~* support vue2/vue3 in top node_module~~
+* ~~support vue2/vue3 dependency coexistence~~
 * integrate nx build tool 
 * integrate custom ui library
 * custom build process scaffolding
