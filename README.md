@@ -2,7 +2,25 @@
 
 monorepo application architecture base on pnpm
 
-## schedule
+## Project Setup
+
+```sh
+pnpm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+pnpm -F package-name dev
+```
+
+### Compile and Minify for Production
+
+```sh
+pnpm -F package-name build
+```
+
+## Schedule
 
 * ~~support vue2/vue3 dependency coexistence~~
 * integrate nx build tool 
