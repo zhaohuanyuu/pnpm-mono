@@ -1,0 +1,15 @@
+{
+  "name": "vue2",
+  "description": "Vue2 JavaScript Starter Project For Vite.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "browserslist": [
+  ],
+  "devDependencies": {
+  }
+}
