@@ -4,6 +4,8 @@ monorepo application architecture base on pnpm
 
 ## Project Setup
 
+### Install dependencies
+
 ```sh
 pnpm install
 ```
