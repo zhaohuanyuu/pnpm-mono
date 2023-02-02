@@ -24,7 +24,7 @@ pnpm -F package-name build
 
 ## Schedule
 
-* ~~support vue2/vue3 dependency coexistence~~
+* ~~Support coexistence of different versions of the same module~~
 * integrate nx build tool 
 * integrate custom ui library
 * custom build process scaffolding
