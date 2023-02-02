@@ -37,7 +37,7 @@
   "homepage": "https://github.com/vitejs/vite-plugin-vue2/#readme",
   "peerDependencies": {
     "vite": "^3.0.0 || ^4.0.0",
-    "vue": "^2.7.0-0"
+    "vue2": "^2.7.0-0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

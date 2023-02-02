@@ -1,6 +1,6 @@
 import { resolve } from "node:path"
 import { defineConfig, loadEnv } from 'vite';
-import vue2 from '@vitejs/vite-plugin-vue2';
+import vue2 from '@vitejs/plugin-vue2';
 
 export default ({ mode }) => {
   const { VITE_PORT, VITE_BASE_URL } = loadEnv(mode, process.cwd());

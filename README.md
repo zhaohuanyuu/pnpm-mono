@@ -24,7 +24,7 @@ pnpm -F package-name build
 
 ## Schedule
 
-* ~~Support coexistence of different versions of the same module~~
+* ~~support coexistence of different versions of the same module~~
 * integrate nx build tool 
 * integrate custom ui library
 * custom build process scaffolding

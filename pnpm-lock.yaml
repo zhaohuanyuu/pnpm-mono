@@ -7,7 +7,7 @@ importers:
       '@types/node': ^18.11.12
       '@vitejs/plugin-vue': ^4.0.0
       '@vitejs/plugin-vue-jsx': ^3.0.0
-      '@vitejs/vite-plugin-vue2': workspace:./packages/vite-plugin-vue2
+      '@vitejs/plugin-vue2': workspace:^2.2.0
       '@vue/tsconfig': ^0.1.3
       npm-run-all: ^4.1.5
       pinia: ^2.0.28
@@ -31,7 +31,7 @@ importers:
       '@types/node': registry.npmmirror.com/@types/node/18.11.18
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45
       '@vitejs/plugin-vue-jsx': registry.npmmirror.com/@vitejs/plugin-vue-jsx/3.0.0_vite@4.0.4+vue@3.2.45
-      '@vitejs/vite-plugin-vue2': link:packages/vite-plugin-vue2
+      '@vitejs/plugin-vue2': link:packages/vite-plugin-vue2
       '@vue/tsconfig': registry.npmmirror.com/@vue/tsconfig/0.1.3_@types+node@18.11.18
       npm-run-all: registry.npmmirror.com/npm-run-all/4.1.5
       prettier: registry.npmmirror.com/prettier/2.8.3
