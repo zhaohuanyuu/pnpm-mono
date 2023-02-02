@@ -8,8 +8,6 @@
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
-  "browserslist": [
-  ],
   "devDependencies": {
   }
 }

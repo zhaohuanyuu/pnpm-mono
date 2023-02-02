@@ -1,13 +1,19 @@
 import { resolve } from "node:path"
-import { defineConfig, loadEnv } from 'vite';
-import vue2 from '@vitejs/plugin-vue2';
+import { defineConfig, loadEnv } from 'vite'
+import vue2 from '@vitejs/plugin-vue2'
+import legacy from "@vitejs/plugin-legacy"
 
 export default ({ mode }) => {
-  const { VITE_PORT, VITE_BASE_URL } = loadEnv(mode, process.cwd());
+  const { VITE_PORT, VITE_BASE_URL, VITE_LEGACY } = loadEnv(mode, process.cwd());
 
   return defineConfig({
     base: VITE_BASE_URL,
-    plugins: [vue2()],
+    plugins: [
+      vue2(),
+      VITE_LEGACY === 'true' ? legacy({
+        targets: ['last 2 versions, not dead, > 0.3%', 'not IE 11']
+      }) : null
+    ],
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src'),

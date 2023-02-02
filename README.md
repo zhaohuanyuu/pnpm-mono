@@ -1,6 +1,6 @@
 # pnpm mono
 
-monorepo application architecture base on pnpm
+Monorepo application based on pnpm, speed up by nx
 
 ## Project Setup
 
@@ -13,20 +13,20 @@ pnpm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-pnpm -F package-name dev
+// single
+npx | pnpm nx dev package-name
+
+// run-many
+npx | pnpm nx run-many --target=dev --projects=xxx,xxx,...
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-pnpm -F package-name build
+// single
+npx | pnpm nx build package-name
+
+// run-many
+npx | pnpm nx run-many --target=build --projects=xxx,xxx,...
 ```
 
-## Schedule
-
-* ~~support coexistence of different versions of the same module~~
-* integrate nx build tool 
-* integrate custom ui library
-* custom build process scaffolding
-* common feature & resource process
-* development and production environment deployment process
