@@ -14,12 +14,12 @@ importers:
       nx: ^15.6.3
       pinia: ^2.0.30
       prettier: ^2.8.3
-      terser: ^5.16.2
+      terser: ^5.16.3
       typescript: ~4.7.4
       vite: ^4.1.1
       vue: ^3.2.47
       vue-router: ^4.1.6
-      vue-router2: npm:vue-router@^3.5.4
+      vue-router2: npm:vue-router@^3.6.5
       vue-tsc: ^1.0.24
       vue2: npm:vue@^2.7.14
       vuex2: npm:vuex@3.6.2
@@ -27,12 +27,12 @@ importers:
       pinia: registry.npmmirror.com/pinia/2.0.30_5yi2kxxaqg74pgvs6b75qdtvru
       vue: registry.npmmirror.com/vue/3.2.47
       vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.47
-      vue-router2: registry.npmmirror.com/vue-router/3.5.4_vue@3.2.47
+      vue-router2: registry.npmmirror.com/vue-router/3.6.5_vue@3.2.47
       vue2: registry.npmmirror.com/vue/2.7.14
       vuex2: registry.npmmirror.com/vuex/3.6.2_vue@3.2.47
     devDependencies:
       '@types/node': registry.npmmirror.com/@types/node/18.11.18
-      '@vitejs/plugin-legacy': registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.2+vite@4.1.1
+      '@vitejs/plugin-legacy': registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.3+vite@4.1.1
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.1.1+vue@3.2.47
       '@vitejs/plugin-vue-jsx': registry.npmmirror.com/@vitejs/plugin-vue-jsx/3.0.0_vite@4.1.1+vue@3.2.47
       '@vitejs/plugin-vue2': link:packages/vite-plugin-vue2
@@ -40,9 +40,9 @@ importers:
       npm-run-all: registry.npmmirror.com/npm-run-all/4.1.5
       nx: registry.npmmirror.com/nx/15.6.3
       prettier: registry.npmmirror.com/prettier/2.8.3
-      terser: registry.npmmirror.com/terser/5.16.2
+      terser: registry.npmmirror.com/terser/5.16.3
       typescript: registry.npmmirror.com/typescript/4.7.4
-      vite: registry.npmmirror.com/vite/4.1.1_ndrtoknlsrlxoi7jhrc2iwbpca
+      vite: registry.npmmirror.com/vite/4.1.1_olwsorijm55qv7ky4zl6koxrg4
       vue-tsc: registry.npmmirror.com/vue-tsc/1.0.24_typescript@4.7.4
 
   modules/react:
@@ -58,7 +58,7 @@ importers:
     devDependencies:
       '@types/react': registry.npmmirror.com/@types/react/18.0.27
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.0.10
-      '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/3.0.1
+      '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/3.1.0
 
   modules/svelte:
     specifiers:
@@ -472,10 +472,10 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/@babel/standalone/7.20.14:
-    resolution: {integrity: sha512-zxdQD6+eMQumJFPOLpOZE34JAAGrZPMXCKvHR7Mtat/l+nHDOxlit5u85HDk5WkBXmvN5PhUMeimiC95KXD9+A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/standalone/-/standalone-7.20.14.tgz}
+  registry.npmmirror.com/@babel/standalone/7.20.15:
+    resolution: {integrity: sha512-B3LmZ1NHlTb2eFEaw8rftZc730Wh9MlmsH8ubb6IjsNoIk9+SQ2aAA0nrm/1806+PftPRAACPClmKTu8PG7Tew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/standalone/-/standalone-7.20.15.tgz}
     name: '@babel/standalone'
-    version: 7.20.14
+    version: 7.20.15
     engines: {node: '>=6.9.0'}
     dev: true
 
@@ -1172,7 +1172,7 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.2+vite@4.1.1:
+  registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.3+vite@4.1.1:
     resolution: {integrity: sha512-9BT2mXunC7kQGKHP70BIbNZ/85P/KUMGKBS9CiV+XKNDZGNBjUnyrh3ofgtqgObmxKaEP2xJsEIRNIFJ+hjI8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-legacy/-/plugin-legacy-3.0.2.tgz}
     id: registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2
     name: '@vitejs/plugin-legacy'
@@ -1182,22 +1182,22 @@ packages:
       terser: ^5.4.0
       vite: ^4.0.0
     dependencies:
-      '@babel/standalone': registry.npmmirror.com/@babel/standalone/7.20.14
+      '@babel/standalone': registry.npmmirror.com/@babel/standalone/7.20.15
       core-js: registry.npmmirror.com/core-js/3.27.2
       magic-string: registry.npmmirror.com/magic-string/0.27.0
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.11
       systemjs: registry.npmmirror.com/systemjs/6.13.0
-      terser: registry.npmmirror.com/terser/5.16.2
-      vite: registry.npmmirror.com/vite/4.1.1_ndrtoknlsrlxoi7jhrc2iwbpca
+      terser: registry.npmmirror.com/terser/5.16.3
+      vite: registry.npmmirror.com/vite/4.1.1_olwsorijm55qv7ky4zl6koxrg4
     dev: true
 
-  registry.npmmirror.com/@vitejs/plugin-react/3.0.1:
-    resolution: {integrity: sha512-mx+QvYwIbbpOIJw+hypjnW1lAbKDHtWK5ibkF/V1/oMBu8HU/chb+SnqJDAsLq1+7rGqjktCEomMTM5KShzUKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-react/-/plugin-react-3.0.1.tgz}
+  registry.npmmirror.com/@vitejs/plugin-react/3.1.0:
+    resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-react/-/plugin-react-3.1.0.tgz}
     name: '@vitejs/plugin-react'
-    version: 3.0.1
+    version: 3.1.0
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^4.0.0
+      vite: ^4.1.0-beta.0
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core/7.20.12
       '@babel/plugin-transform-react-jsx-self': registry.npmmirror.com/@babel/plugin-transform-react-jsx-self/7.18.6_@babel+core@7.20.12
@@ -1221,7 +1221,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core/7.20.12
       '@babel/plugin-transform-typescript': registry.npmmirror.com/@babel/plugin-transform-typescript/7.20.13_@babel+core@7.20.12
       '@vue/babel-plugin-jsx': registry.npmmirror.com/@vue/babel-plugin-jsx/1.1.1_@babel+core@7.20.12
-      vite: registry.npmmirror.com/vite/4.1.1_ndrtoknlsrlxoi7jhrc2iwbpca
+      vite: registry.npmmirror.com/vite/4.1.1_olwsorijm55qv7ky4zl6koxrg4
       vue: registry.npmmirror.com/vue/3.2.47
     transitivePeerDependencies:
       - supports-color
@@ -1237,7 +1237,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/4.1.1_ndrtoknlsrlxoi7jhrc2iwbpca
+      vite: registry.npmmirror.com/vite/4.1.1_olwsorijm55qv7ky4zl6koxrg4
       vue: registry.npmmirror.com/vue/3.2.47
     dev: true
 
@@ -4182,7 +4182,7 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/mkdist/0.3.13_typescript@4.7.4:
+  registry.npmmirror.com/mkdist/0.3.13_typescript@4.9.5:
     resolution: {integrity: sha512-+eCPpkr8l2X630y5PIlkts2tzYEsb+aGIgXdrQv9ZGtWE2bLlD6kVIFfI6FJwFpjjw4dPPyorxQc6Uhm/oXlvg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mkdist/-/mkdist-0.3.13.tgz}
     id: registry.npmmirror.com/mkdist/0.3.13
     name: mkdist
@@ -4201,7 +4201,7 @@ packages:
       jiti: registry.npmmirror.com/jiti/1.16.2
       mri: registry.npmmirror.com/mri/1.2.0
       pathe: registry.npmmirror.com/pathe/0.2.0
-      typescript: registry.npmmirror.com/typescript/4.7.4
+      typescript: registry.npmmirror.com/typescript/4.9.5
     dev: true
 
   registry.npmmirror.com/mlly/0.5.17:
@@ -4973,7 +4973,7 @@ packages:
       glob: registry.npmmirror.com/glob/7.1.4
     dev: true
 
-  registry.npmmirror.com/rollup-plugin-dts/4.2.3_5j6xs4al5kvj74qioxrurhiohm:
+  registry.npmmirror.com/rollup-plugin-dts/4.2.3_zptcx3kz3uwp66hzhyyt545weq:
     resolution: {integrity: sha512-jlcpItqM2efqfIiKzDB/IKOS9E9fDvbkJSGw5GtK/PqPGS9eC3R3JKyw2VvpTktZA+TNgJRMu1NTv244aTUzzQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup-plugin-dts/-/rollup-plugin-dts-4.2.3.tgz}
     id: registry.npmmirror.com/rollup-plugin-dts/4.2.3
     name: rollup-plugin-dts
@@ -4985,7 +4985,7 @@ packages:
     dependencies:
       magic-string: registry.npmmirror.com/magic-string/0.26.7
       rollup: registry.npmmirror.com/rollup/2.79.1
-      typescript: registry.npmmirror.com/typescript/4.7.4
+      typescript: registry.npmmirror.com/typescript/4.9.5
     optionalDependencies:
       '@babel/code-frame': registry.npmmirror.com/@babel/code-frame/7.18.6
     dev: true
@@ -5031,10 +5031,10 @@ packages:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
-  registry.npmmirror.com/rollup/3.12.1:
-    resolution: {integrity: sha512-t9elERrz2i4UU9z7AwISj3CQcXP39cWxgRWLdf4Tm6aKm1eYrqHIgjzXBgb67GNY1sZckTFFi0oMozh3/S++Ig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup/-/rollup-3.12.1.tgz}
+  registry.npmmirror.com/rollup/3.13.0:
+    resolution: {integrity: sha512-HJwQtrXAc0AmyDohTJ/2c+Bx/sWPScJLlAUJ1kuD7rAkCro8Cr2SnVB2gVYBiSLxpgD2kZ24jbyXtG++GumrYQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup/-/rollup-3.13.0.tgz}
     name: rollup
-    version: 3.12.1
+    version: 3.13.0
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5464,10 +5464,10 @@ packages:
       uuid: registry.npmmirror.com/uuid/3.4.0
     dev: true
 
-  registry.npmmirror.com/terser/5.16.2:
-    resolution: {integrity: sha512-JKuM+KvvWVqT7muHVyrwv7FVRPnmHDwF6XwoIxdbF5Witi0vu99RYpxDexpJndXt3jbZZmmWr2/mQa6HvSNdSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.16.2.tgz}
+  registry.npmmirror.com/terser/5.16.3:
+    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.16.3.tgz}
     name: terser
-    version: 5.16.2
+    version: 5.16.3
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -5633,6 +5633,14 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
+  registry.npmmirror.com/typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-4.9.5.tgz}
+    name: typescript
+    version: 4.9.5
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
   registry.npmmirror.com/ufo/1.0.1:
     resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ufo/-/ufo-1.0.1.tgz}
     name: ufo
@@ -5680,7 +5688,7 @@ packages:
       jiti: registry.npmmirror.com/jiti/1.16.2
       magic-string: registry.npmmirror.com/magic-string/0.26.7
       mkdirp: registry.npmmirror.com/mkdirp/1.0.4
-      mkdist: registry.npmmirror.com/mkdist/0.3.13_typescript@4.7.4
+      mkdist: registry.npmmirror.com/mkdist/0.3.13_typescript@4.9.5
       mlly: registry.npmmirror.com/mlly/0.5.17
       mri: registry.npmmirror.com/mri/1.2.0
       pathe: registry.npmmirror.com/pathe/0.3.9
@@ -5688,10 +5696,10 @@ packages:
       pretty-bytes: registry.npmmirror.com/pretty-bytes/6.0.0
       rimraf: registry.npmmirror.com/rimraf/3.0.2
       rollup: registry.npmmirror.com/rollup/2.79.1
-      rollup-plugin-dts: registry.npmmirror.com/rollup-plugin-dts/4.2.3_5j6xs4al5kvj74qioxrurhiohm
+      rollup-plugin-dts: registry.npmmirror.com/rollup-plugin-dts/4.2.3_zptcx3kz3uwp66hzhyyt545weq
       rollup-plugin-esbuild: registry.npmmirror.com/rollup-plugin-esbuild/4.10.3_gkkadhp4kuvg7lmep2ttfihjii
       scule: registry.npmmirror.com/scule/0.2.1
-      typescript: registry.npmmirror.com/typescript/4.7.4
+      typescript: registry.npmmirror.com/typescript/4.9.5
       untyped: registry.npmmirror.com/untyped/0.4.7
     transitivePeerDependencies:
       - supports-color
@@ -5719,7 +5727,7 @@ packages:
     version: 0.4.7
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core/7.20.12
-      '@babel/standalone': registry.npmmirror.com/@babel/standalone/7.20.14
+      '@babel/standalone': registry.npmmirror.com/@babel/standalone/7.20.15
       '@babel/types': registry.npmmirror.com/@babel/types/7.20.7
       scule: registry.npmmirror.com/scule/0.3.2
     transitivePeerDependencies:
@@ -5830,7 +5838,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
-  registry.npmmirror.com/vite/4.1.1_ndrtoknlsrlxoi7jhrc2iwbpca:
+  registry.npmmirror.com/vite/4.1.1_olwsorijm55qv7ky4zl6koxrg4:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.1.1.tgz}
     id: registry.npmmirror.com/vite/4.1.1
     name: vite
@@ -5862,8 +5870,8 @@ packages:
       esbuild: registry.npmmirror.com/esbuild/0.16.17
       postcss: registry.npmmirror.com/postcss/8.4.21
       resolve: registry.npmmirror.com/resolve/1.22.1
-      rollup: registry.npmmirror.com/rollup/3.12.1
-      terser: registry.npmmirror.com/terser/5.16.2
+      rollup: registry.npmmirror.com/rollup/3.13.0
+      terser: registry.npmmirror.com/terser/5.16.3
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
@@ -5934,11 +5942,11 @@ packages:
       vue: registry.npmmirror.com/vue/3.2.47
     dev: false
 
-  registry.npmmirror.com/vue-router/3.5.4_vue@3.2.47:
-    resolution: {integrity: sha512-x+/DLAJZv2mcQ7glH2oV9ze8uPwcI+H+GgTgTmb5I55bCgY3+vXWIsqbYUzbBSZnwFHEJku4eoaH/x98veyymQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-3.5.4.tgz}
-    id: registry.npmmirror.com/vue-router/3.5.4
+  registry.npmmirror.com/vue-router/3.6.5_vue@3.2.47:
+    resolution: {integrity: sha512-VYXZQLtjuvKxxcshuRAwjHnciqZVoXAjTjcqBTz4rKc8qih9g9pI3hbDjmqXaHdgL3v8pV6P8Z335XvHzESxLQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-3.6.5.tgz}
+    id: registry.npmmirror.com/vue-router/3.6.5
     name: vue-router
-    version: 3.5.4
+    version: 3.6.5
     peerDependencies:
       vue: ^2
     dependencies:
