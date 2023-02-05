@@ -12,8 +12,7 @@
   },
   "keywords": [
     "nx",
-    "pnpm",
-    "monorepo"
+    "pnpm"
   ],
   "author": "auu",
   "license": "ISC",
