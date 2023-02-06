@@ -1,4 +1,4 @@
 packages:
-  - "libs/*"
   - "packages/*"
   - "modules/*"
+  - "generators/**"

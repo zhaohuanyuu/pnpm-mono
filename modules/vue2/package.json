@@ -8,6 +8,6 @@
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {},
+  "generators": "generators.json"
 }

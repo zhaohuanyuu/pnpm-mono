@@ -1,5 +1,5 @@
 import Vue from 'vue2';
-import '@/assets/main.css';
+import './assets/main.css';
 
 import App from './App.vue';
 import store from './store';

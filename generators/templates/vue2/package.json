@@ -1,5 +1,5 @@
 {
-  "name": "vue2",
+  "name": "vue2-template",
   "description": "Vue2 JavaScript Starter Project For Vite.",
   "version": "1.0.0",
   "license": "MIT",
@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
-  "browserslist": [
-  ],
-  "devDependencies": {
-  }
+  "browserslist": [],
+  "devDependencies": {},
+  "generators": "generators.json"
 }
