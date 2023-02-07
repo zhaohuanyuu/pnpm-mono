@@ -18,7 +18,6 @@ interface NormalizedSchema extends AppGeneratorSchema {
 }
 
 function normalizeOptions(tree: Tree, options: AppGeneratorSchema): NormalizedSchema {
-  console.log('normalizeOptions', options)
   const name = names(options.name).fileName;
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
@@ -45,26 +44,22 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
       offsetFromRoot: offsetFromRoot(options.projectRoot),
       template: ''
     };
-    generateFiles(tree, path.join(__dirname, '../../../../../templates/vue'), options.projectRoot, templateOptions);
+    generateFiles(tree, path.join(__dirname, '../../../../../templates/'+options.templateDirName), options.projectRoot, templateOptions);
 }
 
 export default async function (tree: Tree, options: AppGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
-  addProjectConfiguration(
-    tree,
-    normalizedOptions.projectName,
-    {
-      root: normalizedOptions.projectRoot,
-      projectType: 'library',
-      sourceRoot: `${normalizedOptions.projectRoot}/src`,
-      targets: {
-        build: {
-          executor: "tooling:build",
-        },
+  /*addProjectConfiguration(tree, normalizedOptions.projectName, {
+    root: normalizedOptions.projectRoot,
+    projectType: 'library',
+    sourceRoot: `${normalizedOptions.projectRoot}/src`,
+    targets: {
+      build: {
+        executor: "tooling:build",
       },
-      tags: normalizedOptions.parsedTags,
-    }
-  );
+    },
+    tags: normalizedOptions.parsedTags,
+  });*/
   addFiles(tree, normalizedOptions);
   await formatFiles(tree);
 }

@@ -14,14 +14,14 @@
       },
       "x-prompt": "What name would you like to use?"
     },
-    "templateName": {
+    "templateDirName": {
       "type": "string",
       "description": "use which template for generation",
       "$default": {
         "$source": "argv",
         "index": 1
       },
-      "x-prompt": "Which template would you lick to use?"
+      "x-prompt": "Which template would you lick to use?(input template directory name)"
     },
     "tags": {
       "type": "string",
@@ -33,5 +33,5 @@
       "description": "A directory where the project is placed"
     }
   },
-  "required": ["name", "templateName"]
+  "required": ["name", "templateDirName"]
 }
