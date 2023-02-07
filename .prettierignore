@@ -1,21 +1,3 @@
-## OS
-.DS_Store
-.idea
-.editorconfig
-pnpm-lock.yaml
-.npmrc
+# Add files here to ignore them from prettier formatting
 
-# Ignored suffix
-*.log
-*.md
-*.svg
-*.png
-*.ico
-*ignore
-
-## Local
-.husky
-
-## Built-files
-.cache
-dist
+/dist

@@ -30,3 +30,8 @@ npx | pnpm nx build package-name
 npx | pnpm nx run-many --target=build --projects=xxx,xxx,...
 ```
 
+### Application generate from template
+
+```sh
+npx | pnpm nx g tooling:app application-name tempalte-name
+```

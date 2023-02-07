@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "App",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "application name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "templateName": {
+      "type": "string",
+      "description": "use which template for generation",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "Which template would you lick to use?"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the project is placed"
+    }
+  },
+  "required": ["name", "templateName"]
+}
