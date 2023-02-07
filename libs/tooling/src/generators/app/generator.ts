@@ -8,9 +8,10 @@ import {
   Tree,
 } from '@nrwl/devkit';
 import * as path from 'path';
-import { AppGeneratorSchema } from './schema';
+import {AppGeneratorSchema} from './schema';
 
 interface NormalizedSchema extends AppGeneratorSchema {
+  appRoot: string;
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
@@ -22,6 +23,7 @@ function normalizeOptions(tree: Tree, options: AppGeneratorSchema): NormalizedSc
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
     : name;
+  const appRoot = `${getWorkspaceLayout(tree).appsDir}`
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-');
   const projectRoot = `${getWorkspaceLayout(tree).libsDir}/${projectDirectory}`;
   const parsedTags = options.tags
@@ -30,6 +32,7 @@ function normalizeOptions(tree: Tree, options: AppGeneratorSchema): NormalizedSc
 
   return {
     ...options,
+    appRoot,
     projectName,
     projectRoot,
     projectDirectory,
@@ -38,13 +41,16 @@ function normalizeOptions(tree: Tree, options: AppGeneratorSchema): NormalizedSc
 }
 
 function addFiles(tree: Tree, options: NormalizedSchema) {
-    const templateOptions = {
-      ...options,
-      ...names(options.name),
-      offsetFromRoot: offsetFromRoot(options.projectRoot),
-      template: ''
-    };
-    generateFiles(tree, path.join(__dirname, '../../../../../templates/'+options.templateDirName), options.projectRoot, templateOptions);
+  const templateOptions = {
+    ...options,
+    ...names(options.name),
+    offsetFromRoot: offsetFromRoot(options.appRoot),
+    template: ''
+  };
+  const srcDir = 'templates/' + templateOptions.templateDirName;
+  const targetDir = templateOptions.appRoot + '/' + templateOptions.projectName;
+
+  generateFiles(tree, srcDir, targetDir, templateOptions);
 }
 
 export default async function (tree: Tree, options: AppGeneratorSchema) {

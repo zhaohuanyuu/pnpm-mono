@@ -1,5 +1,5 @@
 {
-  "name": "<%= name %>",
+  "name": "<%= projectName %>",
   "description": "Vue2 JavaScript Starter Project For Vite.",
   "version": "1.0.0",
   "license": "MIT",
