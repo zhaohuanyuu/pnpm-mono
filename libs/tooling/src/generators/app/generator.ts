@@ -1,5 +1,9 @@
+import * as fs from 'node:fs/promises';
+import * as path from 'path';
 import {
   addProjectConfiguration,
+  readJsonFile,
+  writeJsonFile,
   formatFiles,
   generateFiles,
   getWorkspaceLayout,
@@ -7,8 +11,7 @@ import {
   offsetFromRoot,
   Tree,
 } from '@nrwl/devkit';
-import * as path from 'path';
-import {AppGeneratorSchema} from './schema';
+import { AppGeneratorSchema } from './schema';
 
 interface NormalizedSchema extends AppGeneratorSchema {
   appRoot: string;
@@ -53,6 +56,16 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   generateFiles(tree, srcDir, targetDir, templateOptions);
 }
 
+function updateSchema() {
+  // update templatesDirName x-prompt items
+  fs.readdir(path.join(process.cwd(), '/templates')).then(templatesDir => {
+    const schemaDir = path.resolve(__dirname, './schema.json');
+    const schemaJson = readJsonFile(schemaDir);
+    schemaJson.properties.templateDirName['x-prompt'].items = templatesDir.map(name => ({ value: name, label: name }));
+    writeJsonFile(schemaDir, schemaJson);
+  })
+}
+
 export default async function (tree: Tree, options: AppGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
   /*addProjectConfiguration(tree, normalizedOptions.projectName, {
@@ -66,6 +79,9 @@ export default async function (tree: Tree, options: AppGeneratorSchema) {
     },
     tags: normalizedOptions.parsedTags,
   });*/
-  addFiles(tree, normalizedOptions);
+  updateSchema();
+  if (!options.disableGenerate) {
+    addFiles(tree, normalizedOptions);
+  }
   await formatFiles(tree);
 }

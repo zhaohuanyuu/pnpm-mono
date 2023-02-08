@@ -8,7 +8,7 @@
     "pnpm": ">=7"
   },
   "scripts": {
-    "debug:generator": "npx nx g tooling:app test --inspect"
+    "templates": "pnpm nx g tooling:app x x --disableGenerate=true"
   },
   "keywords": [
     "nx",

@@ -1,9 +1,0 @@
-{
-  "generators": {
-    "create-project": {
-      "factory": "./src/generators/create-project/generator",
-      "schema": "./src/generators/create-project/schema.json",
-      "description": "create-project generator"
-    }
-  }
-}
