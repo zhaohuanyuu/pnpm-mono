@@ -1,5 +1,5 @@
-import * as fs from 'node:fs/promises';
 import * as path from 'path';
+import * as fs from 'node:fs/promises';
 import {
   addProjectConfiguration,
   readJsonFile,
@@ -22,7 +22,7 @@ interface NormalizedSchema extends AppGeneratorSchema {
 }
 
 function normalizeOptions(tree: Tree, options: AppGeneratorSchema): NormalizedSchema {
-  const name = names(options.name).fileName;
+  const name = options.name;
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
     : name;

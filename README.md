@@ -1,4 +1,4 @@
-# pnpm mono
+# Pnpm Mono
 
 Monorepo application based on pnpm, speed up by nx
 
@@ -34,4 +34,24 @@ npx | pnpm nx run-many --target=build --projects=xxx,xxx,...
 
 ```sh
 npx | pnpm nx g tooling:app application-name tempalte-name
+```
+
+# Troubleshooting Record
+
+## win os: nx Error Popup on every nx command
+
+* [nx issues #10822](https://github.com/nrwl/nx/issues/10822)
+* [nx issues #11247](https://github.com/nrwl/nx/issues/11247)
+
+set nx.json > useDaemonProcess: false
+```json
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "useDaemonProcess": false
+      }
+    }
+  }
+}
 ```

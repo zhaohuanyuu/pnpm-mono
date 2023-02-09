@@ -26,10 +26,6 @@
         "type": "list",
         "items": [
           {
-            "value": "test",
-            "label": "test"
-          },
-          {
             "value": "vue",
             "label": "vue"
           },
