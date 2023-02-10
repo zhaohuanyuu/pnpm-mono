@@ -34,7 +34,7 @@ export default ({ mode }) => {
       proxy: {},
     },
     preview: {
-      host: VITE_PORT
+      port: VITE_PORT
     },
     build: {
       // 设置最终构建的浏览器兼容目标
