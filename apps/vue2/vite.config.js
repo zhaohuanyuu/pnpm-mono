@@ -2,25 +2,25 @@ import { resolve } from "node:path"
 import vue2 from '@vitejs/plugin-vue2'
 import legacy from "@vitejs/plugin-legacy"
 import { defineConfig, loadEnv } from 'vite'
+import topLevelAwait from "vite-plugin-top-level-await"
 import federation from "@originjs/vite-plugin-federation"
 
 export default ({ mode }) => {
   const { VITE_PORT, VITE_BASE_URL, VITE_LEGACY } = loadEnv(mode, process.cwd());
+  const isLegacy = VITE_LEGACY === 'true';
 
   return defineConfig({
     base: VITE_BASE_URL,
     plugins: [
       vue2(),
-      VITE_LEGACY === 'true' ? legacy({
-        targets: ['last 2 versions, not dead, > 0.3%', 'not IE 11']
-      }) : null,
-      /*federation({
+       isLegacy ? legacy({ targets: ['last 2 versions, not dead, > 0.3%', 'not IE 11'] }) : null,
+      topLevelAwait(),
+      federation({
         name: 'host-app',
         remotes: {
-          remote_app: "http://localhost:3003/remoteApp.js"
-        },
-        shared: ['vue']
-      })*/
+          remote_app: `http://localhost:3003/assets/remoteEntry${isLegacy ? '-legacy' : ''}.js`
+        }
+      })
     ],
     resolve: {
       alias: {

@@ -7,23 +7,20 @@ import federation from "@originjs/vite-plugin-federation"
 
 export default ({ mode }) => {
   const { VITE_PORT, VITE_BASE_URL, VITE_LEGACY } = loadEnv(mode, process.cwd())
+  const isLegacy = VITE_LEGACY === "true";
 
   return defineConfig({
     base: VITE_BASE_URL,
     plugins: [
       vue2(),
-      VITE_LEGACY === "true"
-        ? legacy({
-            targets: ["last 2 versions, not dead, > 0.5%", "not IE 11"],
-          })
-        : null,
+      isLegacy ? legacy({ targets: ["last 2 versions, not dead, > 0.5%", "not IE 11"] }) : null,
       federation({
         name: 'remote-app',
-        filename: 'remoteApp.js',
+        filename: `remoteEntry${isLegacy ? '-legacy' : ''}.js`,
+        library: { type: 'module' },
         exposes: {
           "./Button": "./src/components/Button.vue"
-        },
-        shared: ['vue']
+        }
       })
     ],
     resolve: {
