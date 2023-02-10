@@ -33,6 +33,9 @@ export default ({ mode }) => {
       // 自定义代理规则
       proxy: {},
     },
+    preview: {
+      host: VITE_PORT
+    },
     build: {
       // 设置最终构建的浏览器兼容目标
       target: 'es2015',
