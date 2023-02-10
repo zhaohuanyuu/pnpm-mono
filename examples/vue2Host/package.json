@@ -1,0 +1,13 @@
+{
+  "name": "vue2Host",
+  "description": "Vue2 JavaScript Starter Project For Vite.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview --port 3000"
+  },
+  "devDependencies": {},
+  "generators": "generators.json"
+}
