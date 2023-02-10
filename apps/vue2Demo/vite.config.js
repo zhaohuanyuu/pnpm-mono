@@ -1,30 +1,34 @@
 import { resolve } from "node:path"
-import vue2 from '@vitejs/plugin-vue2'
+import vue2 from "@vitejs/plugin-vue2"
 import legacy from "@vitejs/plugin-legacy"
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv } from "vite"
 import federation from "@originjs/vite-plugin-federation"
 
+
 export default ({ mode }) => {
-  const { VITE_PORT, VITE_BASE_URL, VITE_LEGACY } = loadEnv(mode, process.cwd());
+  const { VITE_PORT, VITE_BASE_URL, VITE_LEGACY } = loadEnv(mode, process.cwd())
 
   return defineConfig({
     base: VITE_BASE_URL,
     plugins: [
       vue2(),
-      VITE_LEGACY === 'true' ? legacy({
-        targets: ['last 2 versions, not dead, > 0.3%', 'not IE 11']
-      }) : null,
-      /*federation({
-        name: 'host-app',
-        remotes: {
-          remote_app: "http://localhost:3003/remoteApp.js"
+      VITE_LEGACY === "true"
+        ? legacy({
+            targets: ["last 2 versions, not dead, > 0.5%", "not IE 11"],
+          })
+        : null,
+      federation({
+        name: 'remote-app',
+        filename: 'remoteApp.js',
+        exposes: {
+          "./Button": "./src/components/Button.vue"
         },
         shared: ['vue']
-      })*/
+      })
     ],
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src'),
+        "@": resolve(__dirname, "src"),
       },
     },
     server: {
@@ -33,7 +37,7 @@ export default ({ mode }) => {
       // 端口号
       port: VITE_PORT,
       // 监听所有地址
-      host: '0.0.0.0',
+      host: "0.0.0.0",
       // 服务启动时是否自动打开浏览器
       open: false,
       // 允许跨域
@@ -43,7 +47,7 @@ export default ({ mode }) => {
     },
     build: {
       // 设置最终构建的浏览器兼容目标
-      target: 'es2015',
+      target: "es2015",
       // 构建后是否生成 source map 文件
       sourcemap: false,
       //  chunk 大小警告的限制（以 kbs 为单位）
@@ -51,5 +55,5 @@ export default ({ mode }) => {
       // 启用/禁用 gzip 压缩大小报告
       reportCompressedSize: false,
     },
-  });
-};
+  })
+}

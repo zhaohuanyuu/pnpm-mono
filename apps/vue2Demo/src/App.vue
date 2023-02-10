@@ -1,22 +1,26 @@
 <script>
-  import HelloWorld from './components/HelloWorld.vue';
-  import RemoteButton from "remote_app/Button";
+import HelloWorld from "./components/HelloWorld.vue"
 
-  export default {
-    data() {
-      return {}
-    },
-    components: {
-      HelloWorld,
-      RemoteButton
-    }
-  }
+export default {
+  data() {
+    return {}
+  },
+  components: {
+    HelloWorld,
+  },
+}
 </script>
 
 <template>
   <div id="app">
     <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="@/assets/logo.svg"
+        width="125"
+        height="125"
+      />
 
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
@@ -24,7 +28,6 @@
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
         </nav>
-        <RemoteButton />
       </div>
     </header>
 

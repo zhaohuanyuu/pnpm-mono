@@ -10,6 +10,7 @@ importers:
       '@nrwl/devkit': ^15.6.3
       '@nrwl/js': ^15.6.3
       '@nrwl/nx-plugin': ^15.6.3
+      '@originjs/vite-plugin-federation': ^1.1.14
       '@swc-node/register': ^1.5.6
       '@swc/core': ^1.3.32
       '@types/node': ^18.11.18
@@ -22,6 +23,7 @@ importers:
       nx: ^15.6.3
       pinia: ^2.0.30
       prettier: ^2.8.3
+      terser: ^5.16.3
       ts-node: 10.9.1
       tslib: ^2.3.0
       typescript: ^4.9.5
@@ -44,10 +46,11 @@ importers:
       '@nrwl/devkit': registry.npmmirror.com/@nrwl/devkit/15.6.3_nx@15.6.3+typescript@4.9.5
       '@nrwl/js': registry.npmmirror.com/@nrwl/js/15.6.3_6z4ozmz3ekx3ltubg5uz45cbwy
       '@nrwl/nx-plugin': registry.npmmirror.com/@nrwl/nx-plugin/15.6.3_3ykmmki42nucqts2zi3ixaxy7a
+      '@originjs/vite-plugin-federation': registry.npmmirror.com/@originjs/vite-plugin-federation/1.1.14
       '@swc-node/register': registry.npmmirror.com/@swc-node/register/1.5.6_ofrkegp7wplvaewrpezjkk4xzm
       '@swc/core': registry.npmmirror.com/@swc/core/1.3.32
       '@types/node': registry.npmmirror.com/@types/node/18.11.19
-      '@vitejs/plugin-legacy': registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_vite@4.1.1
+      '@vitejs/plugin-legacy': registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.3+vite@4.1.1
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.1.1+vue@3.2.47
       '@vitejs/plugin-vue-jsx': registry.npmmirror.com/@vitejs/plugin-vue-jsx/3.0.0_vite@4.1.1+vue@3.2.47
       '@vitejs/plugin-vue2': link:packages/vite-plugin-vue2
@@ -55,9 +58,10 @@ importers:
       npm-run-all: registry.npmmirror.com/npm-run-all/4.1.5
       nx: registry.npmmirror.com/nx/15.6.3_etsrazdqsaehubbvnliaiodc4e
       prettier: registry.npmmirror.com/prettier/2.8.3
+      terser: registry.npmmirror.com/terser/5.16.3
       ts-node: registry.npmmirror.com/ts-node/10.9.1_pmupkccukveov54l7v25agiylm
       typescript: registry.npmmirror.com/typescript/4.9.5
-      vite: registry.npmmirror.com/vite/4.1.1_@types+node@18.11.19
+      vite: registry.npmmirror.com/vite/4.1.1_akxt3mlquupvdn2keewb3g4hra
       vue-tsc: registry.npmmirror.com/vue-tsc/1.0.24_typescript@4.9.5
 
   apps/react:
@@ -2298,6 +2302,15 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: true
 
+  registry.npmmirror.com/@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jridgewell/source-map/-/source-map-0.3.2.tgz}
+    name: '@jridgewell/source-map'
+    version: 0.3.2
+    dependencies:
+      '@jridgewell/gen-mapping': registry.npmmirror.com/@jridgewell/gen-mapping/0.3.2
+      '@jridgewell/trace-mapping': registry.npmmirror.com/@jridgewell/trace-mapping/0.3.17
+    dev: true
+
   registry.npmmirror.com/@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz}
     name: '@jridgewell/sourcemap-codec'
@@ -2550,6 +2563,16 @@ packages:
       - debug
       - eslint
       - typescript
+    dev: true
+
+  registry.npmmirror.com/@originjs/vite-plugin-federation/1.1.14:
+    resolution: {integrity: sha512-aEz/J3qgZmSQ1tZXvcLTaLcDFInCY09UZFdvopsJllyGw87dWd0cpvw5LEa6DFIhVoeVzbNFAj3mDk3spbw/LA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@originjs/vite-plugin-federation/-/vite-plugin-federation-1.1.14.tgz}
+    name: '@originjs/vite-plugin-federation'
+    version: 1.1.14
+    engines: {node: '>=14.0.0', pnpm: '>=7.0.1'}
+    dependencies:
+      estree-walker: registry.npmmirror.com/estree-walker/3.0.3
+      magic-string: registry.npmmirror.com/magic-string/0.27.0
     dev: true
 
   registry.npmmirror.com/@parcel/watcher/2.0.4:
@@ -3095,7 +3118,7 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_vite@4.1.1:
+  registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2_terser@5.16.3+vite@4.1.1:
     resolution: {integrity: sha512-9BT2mXunC7kQGKHP70BIbNZ/85P/KUMGKBS9CiV+XKNDZGNBjUnyrh3ofgtqgObmxKaEP2xJsEIRNIFJ+hjI8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-legacy/-/plugin-legacy-3.0.2.tgz}
     id: registry.npmmirror.com/@vitejs/plugin-legacy/3.0.2
     name: '@vitejs/plugin-legacy'
@@ -3110,7 +3133,8 @@ packages:
       magic-string: registry.npmmirror.com/magic-string/0.27.0
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.11
       systemjs: registry.npmmirror.com/systemjs/6.13.0
-      vite: registry.npmmirror.com/vite/4.1.1_@types+node@18.11.19
+      terser: registry.npmmirror.com/terser/5.16.3
+      vite: registry.npmmirror.com/vite/4.1.1_akxt3mlquupvdn2keewb3g4hra
     dev: true
 
   registry.npmmirror.com/@vitejs/plugin-react/3.1.0:
@@ -3143,7 +3167,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core/7.20.12
       '@babel/plugin-transform-typescript': registry.npmmirror.com/@babel/plugin-transform-typescript/7.20.13_@babel+core@7.20.12
       '@vue/babel-plugin-jsx': registry.npmmirror.com/@vue/babel-plugin-jsx/1.1.1_@babel+core@7.20.12
-      vite: registry.npmmirror.com/vite/4.1.1_@types+node@18.11.19
+      vite: registry.npmmirror.com/vite/4.1.1_akxt3mlquupvdn2keewb3g4hra
       vue: registry.npmmirror.com/vue/3.2.47
     transitivePeerDependencies:
       - supports-color
@@ -3159,7 +3183,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/4.1.1_@types+node@18.11.19
+      vite: registry.npmmirror.com/vite/4.1.1_akxt3mlquupvdn2keewb3g4hra
       vue: registry.npmmirror.com/vue/3.2.47
     dev: true
 
@@ -4062,6 +4086,12 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: registry.npmmirror.com/delayed-stream/1.0.0
+    dev: true
+
+  registry.npmmirror.com/commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commander/-/commander-2.20.3.tgz}
+    name: commander
+    version: 2.20.3
     dev: true
 
   registry.npmmirror.com/commondir/1.0.1:
@@ -5253,6 +5283,14 @@ packages:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz}
     name: estree-walker
     version: 2.0.2
+
+  registry.npmmirror.com/estree-walker/3.0.3:
+    resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/estree-walker/-/estree-walker-3.0.3.tgz}
+    name: estree-walker
+    version: 3.0.3
+    dependencies:
+      '@types/estree': registry.npmmirror.com/@types/estree/1.0.0
+    dev: true
 
   registry.npmmirror.com/esutils/2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esutils/-/esutils-2.0.3.tgz}
@@ -8657,6 +8695,19 @@ packages:
       supports-hyperlinks: registry.npmmirror.com/supports-hyperlinks/2.3.0
     dev: true
 
+  registry.npmmirror.com/terser/5.16.3:
+    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.16.3.tgz}
+    name: terser
+    version: 5.16.3
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': registry.npmmirror.com/@jridgewell/source-map/0.3.2
+      acorn: registry.npmmirror.com/acorn/8.8.2
+      commander: registry.npmmirror.com/commander/2.20.3
+      source-map-support: registry.npmmirror.com/source-map-support/0.5.21
+    dev: true
+
   registry.npmmirror.com/test-exclude/6.0.0:
     resolution: {integrity: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/test-exclude/-/test-exclude-6.0.0.tgz}
     name: test-exclude
@@ -9129,7 +9180,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
-  registry.npmmirror.com/vite/4.1.1_@types+node@18.11.19:
+  registry.npmmirror.com/vite/4.1.1_akxt3mlquupvdn2keewb3g4hra:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.1.1.tgz}
     id: registry.npmmirror.com/vite/4.1.1
     name: vite
@@ -9162,6 +9213,7 @@ packages:
       postcss: registry.npmmirror.com/postcss/8.4.21
       resolve: registry.npmmirror.com/resolve/1.22.1
       rollup: registry.npmmirror.com/rollup/3.14.0
+      terser: registry.npmmirror.com/terser/5.16.3
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
