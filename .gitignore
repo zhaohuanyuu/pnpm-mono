@@ -11,7 +11,7 @@ node_modules
 .DS_Store
 dist
 dist-ssr
-apps/**/dist
+apps/*/dist
 !/packages/vite-plugin-vue2/dist
 coverage
 *.local
