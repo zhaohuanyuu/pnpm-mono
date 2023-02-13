@@ -10,9 +10,7 @@ export default ({ mode }) => {
     base: VITE_BASE_URL,
     plugins: [
       vue2(),
-      VITE_LEGACY === 'true' ? legacy({
-        targets: ['last 2 versions, not dead, > 0.5%', 'not IE 11']
-      }) : null
+      VITE_LEGACY === 'true' && legacy({ targets: ['last 2 versions, not dead, > 0.5%', 'not IE 11'] })
     ],
     resolve: {
       alias: {

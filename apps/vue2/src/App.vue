@@ -1,6 +1,5 @@
 <script>
   import HelloWorld from './components/HelloWorld.vue';
-  import RemoteButton from "remote_app/Button";
 
   export default {
     data() {
@@ -8,7 +7,6 @@
     },
     components: {
       HelloWorld,
-      RemoteButton
     }
   }
 </script>
@@ -24,7 +22,6 @@
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
         </nav>
-        <RemoteButton />
       </div>
     </header>
 
