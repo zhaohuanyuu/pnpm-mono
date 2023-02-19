@@ -17,6 +17,10 @@ export default ({ mode }) => {
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src'),
+        'vue': 'vue2/dist/vue.runtime.esm.js',
+        '@vue/compiler-sfc': 'vue2/dist/compiler-sfc.js',
+        'vuex': 'vuex2/dist/vuex.esm.js',
+        'vue-router': 'vue-router2/dist/vue-router.esm.js',
       },
     },
     server: {
@@ -44,8 +48,8 @@ export default ({ mode }) => {
       reportCompressedSize: false,
       rollupOptions: {
         output: {
-          dir: "dest",
-          preserveModulesRoot: 'src'
+          // dir: "dest",
+          // preserveModulesRoot: 'src'
         }
       }
     },

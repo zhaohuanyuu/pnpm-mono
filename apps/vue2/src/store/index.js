@@ -1,5 +1,5 @@
-import Vue from 'vue2';
-import Vuex from 'vuex2';
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 const files = import.meta.glob('./modules/*.js', {
   eager: true,

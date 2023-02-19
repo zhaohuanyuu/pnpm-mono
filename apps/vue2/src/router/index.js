@@ -1,5 +1,5 @@
-import Vue from 'vue2';
-import VueRouter from 'vue-router2';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 import demoRouters from './modules/demo';
 
