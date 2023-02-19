@@ -1,5 +1,5 @@
 // extend the descriptor so we can store the scopeId on it
-declare module 'vue/compiler-sfc' {
+declare module 'vue2/compiler-sfc' {
   interface SFCDescriptor {
     id: string
   }
